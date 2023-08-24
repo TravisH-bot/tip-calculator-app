@@ -307,6 +307,10 @@ input[type="number"] {
     margin-bottom: 1rem;
   }
 
+  .bill-input h3 {
+    font-size: 1rem;
+  }
+
   /* ========= Tip Buttons ========= */
 
   .buttons-container {
@@ -315,6 +319,10 @@ input[type="number"] {
     grid-gap: 3rem 6rem;
     height: 12rem;
     margin-bottom: 0;
+  }
+
+  .tip-buttons h3 {
+    font-size: 1rem;
   }
 
   .tip-buttons button {
@@ -332,10 +340,23 @@ input[type="number"] {
     height: 3rem;
   }
 
+  .people-input h3 {
+    font-size: 1rem;
+  }
+
   /* =========================== Outputs Container =========================== */
   .outputs-container {
     width: 100%;
     padding: 1rem;
+  }
+
+  /* ========= Tip ========= */
+  .tip h3 {
+    font-size: 1rem;
+  }
+
+  .tip p {
+    font-size: 0.9rem;
   }
 
   /* ========= Total ========= */
@@ -343,12 +364,21 @@ input[type="number"] {
     margin-bottom: 1rem;
   }
 
+  .total h3 {
+    font-size: 1rem;
+  }
+
+  .total p {
+    font-size: 0.9rem;
+  }
+
   .output {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   .reset {
     margin-top: 0;
+    height: 3rem;
   }
 
   .reset:focus {
