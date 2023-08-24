@@ -1,4 +1,4 @@
-const Outputs = () => {
+const Outputs = (props) => {
   return (
     <div className="outputs-container">
       <div className="tip-container">
@@ -7,7 +7,7 @@ const Outputs = () => {
           <p>/ person</p>
         </div>
         <div id="tip-amount" className="output">
-          $0.00
+          {props.tipTotal}
         </div>
       </div>
       <div className="total-container">
@@ -16,7 +16,7 @@ const Outputs = () => {
           <p>/ person</p>
         </div>
         <div id="total-amount" className="output">
-          $0.00
+          {props.splitTotal}
         </div>
       </div>
       <button className="reset">Reset</button>
