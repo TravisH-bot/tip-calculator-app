@@ -1,4 +1,5 @@
 import "./App.css";
+import logo from "./images/logo.svg";
 import Inputs from "./components/Inputs";
 import Outputs from "./components/Outputs";
 import Footer from "./components/Footer";
@@ -6,9 +7,8 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
-      <div className="title">
-        <h1>Spli</h1>
-        <h1>tter</h1>
+      <div className="logo">
+        <img src={logo} alt="logo"></img>
       </div>
       <div className="calc-container">
         <Inputs />

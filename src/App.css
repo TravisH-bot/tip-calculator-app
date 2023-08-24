@@ -34,14 +34,11 @@ body {
 }
 
 /* =========================== Title =========================== */
-.title {
+.logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 5rem;
-  text-transform: uppercase;
-  color: var(--very-dark-cyan);
-  letter-spacing: 0.8rem;
 }
 
 /* =========================== Calc Container =========================== */
@@ -279,4 +276,87 @@ input[type="number"] {
   background-color: var(--very-dark-cyan);
   color: var(--dark-cyan);
   transform: translateY(0.05rem);
+}
+
+/* =========================== Media Queries =========================== */
+@media screen and (max-width: 768px) {
+  /* =========================== Title =========================== */
+  .logo {
+    margin: 3rem 0 2rem 0;
+  }
+  /* =========================== Calc Container =========================== */
+  .calc-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+
+  /* =========================== Inputs Container =========================== */
+  .inputs-container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* ========= Bill Input ========= */
+  .bill {
+    height: 3rem;
+  }
+
+  .bill-input {
+    margin-bottom: 1rem;
+  }
+
+  /* ========= Tip Buttons ========= */
+
+  .buttons-container {
+    grid-template-rows: 0.8rem 0.8rem 0.8rem;
+    grid-template-columns: 4rem 4rem;
+    grid-gap: 3rem 6rem;
+    height: 12rem;
+    margin-bottom: 0;
+  }
+
+  .tip-buttons button {
+    width: 9.5rem;
+    height: 3rem;
+  }
+
+  .tip-buttons #custom {
+    width: 9.5rem;
+    height: 3rem;
+  }
+
+  /* ========= People Input ========= */
+  .people {
+    height: 3rem;
+  }
+
+  /* =========================== Outputs Container =========================== */
+  .outputs-container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* ========= Total ========= */
+  .total-container {
+    margin-bottom: 1rem;
+  }
+
+  .output {
+    font-size: 2.5rem;
+  }
+
+  .reset {
+    margin-top: 0;
+  }
+
+  .reset:focus {
+    background-color: var(--strong-cyan);
+  }
+
+  .attribution {
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
