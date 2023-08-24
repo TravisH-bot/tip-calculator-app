@@ -13,7 +13,7 @@ const Inputs = () => {
           <button>15%</button>
           <button>25%</button>
           <button>50%</button>
-          <button id="custom">Custom</button>
+          <input type="number" id="custom" placeholder="Custom"></input>
         </div>
       </div>
       <div className="people-input">
