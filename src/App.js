@@ -25,6 +25,32 @@ function App() {
     setTip(value);
   };
 
+  const handleButtonPressFive = () => {
+    document.addEventListener("click", () => {
+      setTip("5%");
+    });
+  };
+  const handleButtonPressTen = () => {
+    document.addEventListener("click", () => {
+      setTip("10%");
+    });
+  };
+  const handleButtonPressFifteen = () => {
+    document.addEventListener("click", () => {
+      setTip("15%");
+    });
+  };
+  const handleButtonPressTwentyFive = () => {
+    document.addEventListener("click", () => {
+      setTip("25%");
+    });
+  };
+  const handleButtonPressFifty = () => {
+    document.addEventListener("click", () => {
+      setTip("50%");
+    });
+  };
+
   const handleBillChange = (e) => {
     setBill(e.target.value);
   };
@@ -37,7 +63,6 @@ function App() {
     const percentage = parseInt(tip.replace("%", "")) / 100;
     const result = ((bill * percentage) / people).toFixed(2);
     setTipTotal(result);
-    console.log(people);
   };
 
   const totalCalculate = () => {
@@ -61,6 +86,11 @@ function App() {
           handleBillChange={handleBillChange}
           handlePeopleChange={handlePeopleChange}
           handleTipChange={handleTipChange}
+          handleButtonPressFive={handleButtonPressFive}
+          handleButtonPressTen={handleButtonPressTen}
+          handleButtonPressFifteen={handleButtonPressFifteen}
+          handleButtonPressTwentyFive={handleButtonPressTwentyFive}
+          handleButtonPressFifty={handleButtonPressFifty}
         />
         <Outputs splitTotal={splitTotal} tipTotal={tipTotal} />
       </div>

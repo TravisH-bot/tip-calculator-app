@@ -7,7 +7,7 @@ const Outputs = (props) => {
           <p>/ person</p>
         </div>
         <div id="tip-amount" className="output">
-          {props.tipTotal}
+          ${props.tipTotal}
         </div>
       </div>
       <div className="total-container">
@@ -16,7 +16,7 @@ const Outputs = (props) => {
           <p>/ person</p>
         </div>
         <div id="total-amount" className="output">
-          {props.splitTotal}
+          ${props.splitTotal}
         </div>
       </div>
       <button className="reset">Reset</button>

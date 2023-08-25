@@ -14,11 +14,11 @@ const Inputs = (props) => {
       <div className="tip-buttons">
         <h3>Select Tip %</h3>
         <div className="buttons-container">
-          <button>5%</button>
-          <button>10%</button>
-          <button>15%</button>
-          <button>25%</button>
-          <button>50%</button>
+          <button onClick={props.handleButtonPressFive}>5%</button>
+          <button onClick={props.handleButtonPressTen}>10%</button>
+          <button onClick={props.handleButtonPressFifteen}>15%</button>
+          <button onClick={props.handleButtonPressTwentyFive}>25%</button>
+          <button onClick={props.handleButtonPressFifty}>50%</button>
           <input
             onChange={props.handleTipChange}
             value={props.tip}
