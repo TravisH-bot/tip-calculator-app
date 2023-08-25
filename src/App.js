@@ -45,9 +45,9 @@ function App() {
 
   const handleReset = () => {
     setBill("");
-    setTip(0);
-    setTipTotal(0);
+    setTip("");
     setPeople(1);
+    setTipTotal(0);
     setSplitTotal(0);
   };
 
