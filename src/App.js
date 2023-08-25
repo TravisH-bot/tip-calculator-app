@@ -19,33 +19,33 @@ function App() {
 
   const handleButtonPressFive = () => {
     document.addEventListener("click", () => {
-      setTip("5%");
+      setTip(5);
     });
   };
   const handleButtonPressTen = () => {
     document.addEventListener("click", () => {
-      setTip("10%");
+      setTip(10);
     });
   };
   const handleButtonPressFifteen = () => {
     document.addEventListener("click", () => {
-      setTip("15%");
+      setTip(15);
     });
   };
   const handleButtonPressTwentyFive = () => {
     document.addEventListener("click", () => {
-      setTip("25%");
+      setTip(25);
     });
   };
   const handleButtonPressFifty = () => {
     document.addEventListener("click", () => {
-      setTip("50%");
+      setTip(50);
     });
   };
 
   const handleReset = (e) => {
     setBill(0);
-    setTip("Custom");
+    setTip(0);
     setTipTotal(0);
     setPeople(1);
     setSplitTotal(0);
