@@ -9,21 +9,13 @@ function App() {
   // bill total
   const [bill, setBill] = useState("");
   // custom tip percentage
-  const [tip, setTip] = useState("0%");
+  const [tip, setTip] = useState("");
   // tip total
   const [tipTotal, setTipTotal] = useState(0);
   // number of people
   const [people, setPeople] = useState(1);
   // total per person
   const [splitTotal, setSplitTotal] = useState(1);
-
-  const handleTipChange = (e) => {
-    let value = e.target.value.replace("%", "");
-    if (value.indexOf("%") === -1) {
-      value = value + "%";
-    }
-    setTip(value);
-  };
 
   const handleButtonPressFive = () => {
     document.addEventListener("click", () => {
@@ -51,6 +43,18 @@ function App() {
     });
   };
 
+  const handleReset = (e) => {
+    setBill(0);
+    setTip("Custom");
+    setTipTotal(0);
+    setPeople(1);
+    setSplitTotal(0);
+  };
+
+  const handleTipChange = (e) => {
+    setTip(e.target.value);
+  };
+
   const handleBillChange = (e) => {
     setBill(e.target.value);
   };
@@ -60,13 +64,13 @@ function App() {
   };
 
   const tipCalculate = () => {
-    const percentage = parseInt(tip.replace("%", "")) / 100;
+    const percentage = tip / 100;
     const result = ((bill * percentage) / people).toFixed(2);
     setTipTotal(result);
   };
 
   const totalCalculate = () => {
-    const percentage = 1 + parseInt(tip.replace("%", "")) / 100;
+    const percentage = 1 + tip / 100;
     const result = ((bill * percentage) / people).toFixed(2);
     setSplitTotal(result);
   };
@@ -83,6 +87,9 @@ function App() {
       </div>
       <div className="calc-container">
         <Inputs
+          bill={bill}
+          people={people}
+          tip={tip}
           handleBillChange={handleBillChange}
           handlePeopleChange={handlePeopleChange}
           handleTipChange={handleTipChange}
@@ -92,7 +99,12 @@ function App() {
           handleButtonPressTwentyFive={handleButtonPressTwentyFive}
           handleButtonPressFifty={handleButtonPressFifty}
         />
-        <Outputs splitTotal={splitTotal} tipTotal={tipTotal} />
+        <Outputs
+          handleTipChange={handleTipChange}
+          splitTotal={splitTotal}
+          tipTotal={tipTotal}
+          handleReset={handleReset}
+        />
       </div>
       <Footer />
     </div>

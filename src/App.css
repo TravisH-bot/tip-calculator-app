@@ -278,6 +278,11 @@ input[type="number"] {
   transform: translateY(0.05rem);
 }
 
+.attribution {
+  text-align: center;
+  margin-top: 3rem;
+}
+
 /* =========================== Media Queries =========================== */
 @media screen and (max-width: 768px) {
   /* =========================== Title =========================== */
