@@ -43,8 +43,8 @@ function App() {
     });
   };
 
-  const handleReset = (e) => {
-    setBill(0);
+  const handleReset = () => {
+    setBill("");
     setTip(0);
     setTipTotal(0);
     setPeople(1);
