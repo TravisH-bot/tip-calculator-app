@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/tip-calculator-app/static/css/main.c272c952.css",
-    "main.js": "/tip-calculator-app/static/js/main.fea000e5.js",
+    "main.css": "/tip-calculator-app/static/css/main.2ac7f1bc.css",
+    "main.js": "/tip-calculator-app/static/js/main.2370ec6d.js",
     "static/media/logo.svg": "/tip-calculator-app/static/media/logo.3cc0528bd46321d63d85702006069614.svg",
     "static/media/icon-dollar.svg": "/tip-calculator-app/static/media/icon-dollar.9f9be3534a9295a65957.svg",
     "static/media/icon-person.svg": "/tip-calculator-app/static/media/icon-person.65bfd20465dd1d2cb58c.svg",
     "index.html": "/tip-calculator-app/index.html",
-    "main.c272c952.css.map": "/tip-calculator-app/static/css/main.c272c952.css.map",
-    "main.fea000e5.js.map": "/tip-calculator-app/static/js/main.fea000e5.js.map"
+    "main.2ac7f1bc.css.map": "/tip-calculator-app/static/css/main.2ac7f1bc.css.map",
+    "main.2370ec6d.js.map": "/tip-calculator-app/static/js/main.2370ec6d.js.map"
   },
   "entrypoints": [
-    "static/css/main.c272c952.css",
-    "static/js/main.fea000e5.js"
+    "static/css/main.2ac7f1bc.css",
+    "static/js/main.2370ec6d.js"
   ]
 }
