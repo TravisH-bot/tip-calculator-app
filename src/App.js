@@ -16,6 +16,17 @@ function App() {
   const [people, setPeople] = useState(1);
   // total per person
   const [splitTotal, setSplitTotal] = useState(1);
+  // people error state
+  const [error, setError] = useState(false);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    if (people < 1) {
+      setError(true);
+      return null;
+    }
+  };
 
   const handleButtonPressFive = () => {
     document.addEventListener("click", () => {
@@ -78,34 +89,38 @@ function App() {
   useEffect(() => {
     totalCalculate();
     tipCalculate();
-  }, [bill, tip, people]);
+  }, [bill, tip, people, submitHandler, error]);
 
   return (
     <div className="App">
       <div className="logo">
         <img src={logo} alt="logo"></img>
       </div>
-      <div className="calc-container">
-        <Inputs
-          bill={bill}
-          people={people}
-          tip={tip}
-          handleBillChange={handleBillChange}
-          handlePeopleChange={handlePeopleChange}
-          handleTipChange={handleTipChange}
-          handleButtonPressFive={handleButtonPressFive}
-          handleButtonPressTen={handleButtonPressTen}
-          handleButtonPressFifteen={handleButtonPressFifteen}
-          handleButtonPressTwentyFive={handleButtonPressTwentyFive}
-          handleButtonPressFifty={handleButtonPressFifty}
-        />
-        <Outputs
-          handleTipChange={handleTipChange}
-          splitTotal={splitTotal}
-          tipTotal={tipTotal}
-          handleReset={handleReset}
-        />
-      </div>
+      <form onSubmit={submitHandler}>
+        <div className="calc-container">
+          <Inputs
+            bill={bill}
+            people={people}
+            tip={tip}
+            handleBillChange={handleBillChange}
+            handlePeopleChange={handlePeopleChange}
+            handleTipChange={handleTipChange}
+            handleButtonPressFive={handleButtonPressFive}
+            handleButtonPressTen={handleButtonPressTen}
+            handleButtonPressFifteen={handleButtonPressFifteen}
+            handleButtonPressTwentyFive={handleButtonPressTwentyFive}
+            handleButtonPressFifty={handleButtonPressFifty}
+            submitHandler={submitHandler}
+            error={error}
+          />
+          <Outputs
+            handleTipChange={handleTipChange}
+            splitTotal={splitTotal}
+            tipTotal={tipTotal}
+            handleReset={handleReset}
+          />
+        </div>
+      </form>
       <Footer />
     </div>
   );

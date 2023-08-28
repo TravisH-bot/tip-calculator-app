@@ -23,6 +23,7 @@
   --light-grayish-cyan: hsl(185, 41%, 84%);
   --very-light-grayish-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+  --soft-red: hsl(0, 43%, 56%);
 }
 
 body {
@@ -98,6 +99,19 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.title-error {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  color: var(--soft-red);
+}
+
+.error .people {
+  border: 0.2rem solid var(--soft-red);
 }
 
 /* ========= Tip Buttons ========= */
@@ -198,6 +212,10 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.error {
+  border: 0.2rem solid var();
 }
 
 /* =========================== Outputs Container =========================== */

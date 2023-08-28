@@ -29,7 +29,10 @@ const Inputs = (props) => {
         </div>
       </div>
       <div className="people-input">
-        <h3>Number of People</h3>
+        <div className="title-error">
+          <h3>Number of People</h3>
+          {props.error && <span className="error">Can't be zero</span>}
+        </div>
         <input
           onChange={props.handlePeopleChange}
           value={props.people}
