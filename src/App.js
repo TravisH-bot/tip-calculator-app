@@ -22,33 +22,38 @@ function App() {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if (people < 1) {
+    if (people < 1 || people === " " || people === 0) {
       setError(true);
       return null;
     }
   };
 
-  const handleButtonPressFive = () => {
+  const handleButtonPressFive = (e) => {
+    // e.preventDefault();
     document.addEventListener("click", () => {
       setTip(5);
     });
   };
-  const handleButtonPressTen = () => {
+  const handleButtonPressTen = (e) => {
+    // e.preventDefault();
     document.addEventListener("click", () => {
       setTip(10);
     });
   };
-  const handleButtonPressFifteen = () => {
+  const handleButtonPressFifteen = (e) => {
+    // e.preventDefault();
     document.addEventListener("click", () => {
       setTip(15);
     });
   };
-  const handleButtonPressTwentyFive = () => {
+  const handleButtonPressTwentyFive = (e) => {
+    // e.preventDefault();
     document.addEventListener("click", () => {
       setTip(25);
     });
   };
-  const handleButtonPressFifty = () => {
+  const handleButtonPressFifty = (e) => {
+    // e.preventDefault();
     document.addEventListener("click", () => {
       setTip(50);
     });

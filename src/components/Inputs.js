@@ -37,7 +37,7 @@ const Inputs = (props) => {
           onChange={props.handlePeopleChange}
           value={props.people}
           type="number"
-          className={`${props.error}` ? "error-border" : "people"}
+          className={`${props.error}` ? "people" : "error-border"}
           placeholder="1"
         ></input>
       </div>
