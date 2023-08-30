@@ -106,24 +106,12 @@ input[type="number"] {
   justify-content: space-between;
 }
 
-.error {
-  color: var(--soft-red);
+.people.error {
+  border: 0.2rem solid var(--soft-red);
 }
 
-.error-border {
-  width: 100%;
-  height: 4rem;
-  border-radius: 0.3rem;
-  text-align: right;
-  background-image: url("./images/icon-dollar.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 50%;
-  color: var(--grayish-cyan);
-  font-size: 1.5rem;
-  padding-right: 0.8rem;
-  outline: none;
-  border: 0.2rem solid var(--soft-red);
-  background-color: var(--very-light-grayish-cyan);
+.error {
+  color: var(--soft-red);
 }
 
 /* ========= Tip Buttons ========= */

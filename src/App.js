@@ -22,7 +22,7 @@ function App() {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if (people < 1 || people === " " || people === 0) {
+    if (people === 0 && "error") {
       setError(true);
       return null;
     }
